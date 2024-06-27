@@ -16,6 +16,9 @@ app = FastAPI()
 @app.get('/')
 def read_root():
     return {'message': 'Iris model API'}
+@app.get('/get')
+def get():
+    return {'message': 'Iris model API'}
 
 @app.post('/predict')
 def predict(data: dict):
